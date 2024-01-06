@@ -1,0 +1,28 @@
+<form (ngSubmit)="saveBook()" class="form-container">
+  <label for="authorName">Author Name:</label>
+  <input type="text" id="authorName" name="authorName" [(ngModel)]="authorName" required><br><br>
+
+  <label for="bookName">Book Name:</label>
+  <input type="text" id="bookName" name="bookName" [(ngModel)]="bookName" required><br><br>
+
+  <label for="publisherName">Publisher Name:</label>
+  <input type="text" id="publisherName" name="publisherName" [(ngModel)]="publisherName" required><br><br>
+
+  <label for="publishDate">Publish Date:</label>
+  <input type="date" id="publishDate" name="publishDate" [(ngModel)]="publishDate" required><br><br>
+
+  <label for="subjectCategory">Subject Category:</label>
+  <input type="text" id="subjectCategory" name="subjectCategory" [(ngModel)]="subjectCategory" required><br><br>
+
+  <label for="subjectSubCategory">Subject Sub-Category:</label>
+  <input type="text" id="subjectSubCategory" name="subjectSubCategory" [(ngModel)]="subjectSubCategory" required><br><br>
+
+  <label for="bindingType">Binding Type:</label>
+  <select id="bindingType" name="bindingType" [(ngModel)]="bindingType" required>
+    <option value="Hard Cover">Hard Cover</option>
+    <option value="Paperback">Paperback</option>
+  </select><br><br>
+
+  <button type="submit">Save</button>
+  <button type="button" class="clear-btn" (click)="clearFields()">Clear</button>
+</form>

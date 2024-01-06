@@ -1,0 +1,20 @@
+<h2>Search Form</h2>
+<form (ngSubmit)="searchBooks()">
+  <label for="searchInput">Search by Author/Book/Publisher/Publish Date:</label>
+  <input type="text" id="searchInput" [(ngModel)]="searchKeyword" name="searchKeyword" placeholder="Enter keyword...">
+  <button type="submit">Search</button>
+</form>
+
+<div *ngIf="searchResults.length > 0">
+  <h3>Search Results:</h3>
+  <div *ngFor="let book of searchResults">
+    <p><strong>Book Name:</strong> {{ book.BookName }}</p>
+    <p><strong>Author:</strong> {{ book.AuthorName }}</p>
+    <p><strong>Publisher:</strong> {{ book.PublisherName }}</p>
+    <p><strong>Publish Date:</strong> {{ book.PublishDate }}</p>
+    <p><strong>Subject Category:</strong> {{ book.SubjectCategory }}</p>
+    <p><strong>Subject Subcategory:</strong> {{ book.SubjectSubCategory }}</p>
+    <p><strong>Binding:</strong> {{ book.Binding }}</p>
+    <hr>
+  </div>
+</div>
